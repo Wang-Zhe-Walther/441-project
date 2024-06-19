@@ -1,0 +1,269 @@
+/*StUdEnt Name: Walther Wang Zhe*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(1, 189, 252); /*  */
+    text-align: center;
+    font-weight: bold;
+    color: orange; /*  */
+    padding: 20px;
+    font-size: 36px; /*  */
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(1, 190, 253);
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*  */
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#loginForm {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.create-account a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.text-table {
+    margin: 0 auto; /*  */
+    width: 80%; /*  */
+}
+
+.text-table td {
+    text-align: justify; /*  */
+    vertical-align: top; /*  */
+    padding: 20px; /*  */
+}
+.welcome-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.welcome-table th,
+.welcome-table td {
+    padding: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.welcome-table th {
+    background-color: lightblue;
+    font-weight: bold;
+    color: orange;
+}
+
+
+.welcome-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.course-table, .resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.course-table th, .course-table td, .resource-table th, .resource-table td {
+    padding: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.course-table th, .resource-table th {
+    background-color: lightblue;
+    font-weight: bold;
+    color: orange;
+}
+
+.course-table tr:nth-child(even), .resource-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products {
+    display: flex; /*  */
+    flex-wrap: wrap; /*  */
+    justify-content: space-around; /*  */
+  }
+
+  .product-group {
+    display: flex; /*  */
+    justify-content: space-between; /*  */
+    width: 100%; /*  */
+}
+  
+  .product {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .quantity-input {
+    width: 50px;
+  }
+  
+  .separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .cart {
+    text-align: center;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cart-remove {
+    cursor: pointer;
+    color: red;
+  }
+
+  .outstanding-graduates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.outstanding-graduates .graduate-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.outstanding-graduates .graduate-image {
+    width: 70%;
+    max-width: auto;
+    margin-bottom: 10px;
+}
+
+.outstanding-graduates .profile-content {
+    text-align: justify;
+    width: 70%;
+    max-width: auto;
+}
