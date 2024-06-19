@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
-    const actionMessageElement = document.createElement('p'); // Create a new element to show messages
-
-    // Append the message element to the form for displaying login status
+    const actionMessageElement = document.createElement('p');
     loginForm.appendChild(actionMessageElement);
 
     loginForm.addEventListener('submit', function(event) {
@@ -11,16 +9,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // For demonstration purposes, let's assume correct credentials
-        const correctUsername = 'exampleUser';
-        const correctPassword = 'examplePass';
+        // Read user data from cookie
+        const cookies = document.cookie.split(';');
+        let userDetails = null;
+        cookies.forEach(cookie => {
+            const cookiePair = cookie.trim().split('=');
+            if (cookiePair[0] === 'userDetails') {
+                try {
+                    userDetails = JSON.parse(decodeURIComponent(cookiePair[1]));
+                } catch(e) {
+                    console.error("Error parsing cookie:", e);
+                }
+            }
+        });
 
-        if (username === correctUsername && password === correctPassword) {
+        // Validate against cookie data if available
+        if (userDetails && userDetails.username === username && userDetails.password === password) {
             alert('Login successful!');
-            window.location.href = 'home.html'; // Change to home.html upon success
+            window.location.href = 'home.html';
         } else {
             actionMessageElement.textContent = "Invalid username or password.";
-            actionMessageElement.style.color = 'red'; // Style for error message
+            actionMessageElement.style.color = 'red';
         }
     });
 });
