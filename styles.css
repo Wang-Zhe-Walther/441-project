@@ -1,0 +1,330 @@
+/*StUdEnt Name: Walther Wang Zhe*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(0, 188, 251);
+    color: orange;
+    font-size: 36px;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login-btn, .logout-btn {
+    float: right;
+    margin-left: 10px;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* 减小按钮大小 */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* 减小字体大小 */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* 默认隐藏 */
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*  */
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-group button {
+    width: 48%; /* 调整宽度以确保两个按钮并列 */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-group button:last-child {
+    background-color: #007BFF;
+    color: white;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.text-table {
+    margin: 0 auto; /*  */
+    width: 80%; /*  */
+}
+
+.text-table td {
+    text-align: justify; /*  */
+    vertical-align: top; /*  */
+    padding: 20px; /*  */
+}
+
+.welcome-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.welcome-table th,
+.welcome-table td {
+    padding: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.welcome-table th {
+    background-color: lightblue;
+    font-weight: bold;
+    color: orange;
+}
+
+.welcome-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.course-table, .resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.course-table th, .course-table td, .resource-table th, .resource-table td {
+    padding: 10px;
+    text-align: justify;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.course-table th, .resource-table th {
+    background-color: lightblue;
+    font-weight: bold;
+    color: orange;
+}
+
+.course-table tr:nth-child(even), .resource-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products {
+    display: flex; /*  */
+    flex-wrap: wrap; /*  */
+    justify-content: space-around; /*  */
+}
+
+.product-group {
+    display: flex; /*  */
+    justify-content: space-between; /*  */
+    width: 100%; /*  */
+}
+
+.product {
+    text-align: center;
+    margin: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.cart {
+    text-align: center;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-remove {
+    cursor: pointer;
+    color: red;
+}
+
+.outstanding-graduates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.outstanding-graduates .graduate-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.outstanding-graduates .graduate-image {
+    width: 70%;
+    max-width: auto;
+    margin-bottom: 10px;
+}
+
+.outstanding-graduates .profile-content {
+    text-align: justify;
+    width: 70%;
+    max-width: auto;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training Center</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .logout-btn {
+            display: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header" style="background-color: rgb(1, 191, 255); color: orange; font-size: 36px;">
+        Training Center
+    </div>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Menu 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="Courseware.html">Courseware</a>
+                <a href="Shooping Cart.html">Shopping Cart</a>
+                <a href="Project.html">Project</a>
+            </div>
+        </div> <!-- End dropdown -->
+        <a href="login.html" class="login-btn" id="login-btn">Login</a>
+        <button class="logout-btn" id="logout-btn">Logout</button>
+    </div> <!-- End navbar -->
+
+    <table class="welcome-table">
+        <tbody>
+            <tr>
+                <th colspan="2">Welcome to Training Center</th>
+            </tr>
+            <tr>
+                <td>Your Professional IT Training Resource Center</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Training Center is a well-known registered training organization (RTO) located in Australia, dedicated to providing high-quality IT courses and training resource packages for students. We are committed to helping students master the latest IT skills and laying a solid foundation for their careers.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Rich course selection</strong>
+                    <br />
+                    We offer 5 meticulously designed IT courses, covering various levels from basic to advanced, to meet the learning needs of different students. Whether you are a beginner or a student with a certain foundation, you can find courses that suit you here.
+                </td>
+                <td>
+                    <strong>Professional training resource package</strong>
+                    <br />
+                    In addition to the courses, we also provide 8 professional training resource packages for other RTOs. These resource packages have been carefully planned and produced to help other training institutions improve teaching quality and efficiency.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>A convenient online platform</strong>
+                    <br />
+                    For the convenience of students and partners, we have specially created a dynamic website. This website not only provides course registration function, but also allows other RTOs to order training resource packages online. You can easily browse course details, resource package content, and complete the registration and ordering process here.
+                </td>
+                <td>
+                    <strong>Excellent teaching quality</strong>
+                    <br />
+                    We are well aware of the importance of teaching quality, so our courses and training resource packages have undergone strict quality control and evaluation. Our teaching team is composed of experienced industry experts who provide the most valuable guidance to students with their professional knowledge and practical experience.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Comprehensive after-sales service</strong>
+                    <br />
+                    We value the feedback and needs of every student and provide comprehensive after-sales service. If you encounter any problems or difficulties during the learning process, our professional team will be available to assist and support you at any time.
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Thank you for choosing Training Center as your IT training partner. We look forward to working together with you to create a better future!
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer style="background-color:black; color:white; text-align:center; padding:20px;">
+        By IT A2 © Made in 2024. All rights reserved.
+    </footer>
+
+    <script src="home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            var logoutBtn = document.getElementById('logout-btn');
+            var loginBtn = document.getElementById('login-btn');
+        
+            if (isLoggedIn) {
+                // User is logged in, show logout button and hide login button
+                logoutBtn.style.display = 'block';
+                loginBtn.style.display = 'none';
+        
+                // Add logout event handler
+                logoutBtn.addEventListener('click', function() {
+                    localStorage.removeItem('isLoggedIn');
+                    window.location.href = 'index.html';
+                });
+            } else {
+                // User is not logged in, show login button and hide logout button
+                logoutBtn.style.display = 'none';
+                loginBtn.style.display = 'block';
+
+                // Show alert and redirect to login page
+                alert('Please login first');
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+
+</body>
+</html>
