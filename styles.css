@@ -86,15 +86,17 @@ body {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 8px 12px; /* 减小按钮大小 */
+    padding: 8px 12px; /* Reduce button size */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px; /* 减小字体大小 */
+    font-size: 14px; /* Reduce font size
+ */
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    display: none; /* 默认隐藏 */
+    display: none; /* Default Hide
+ */
 }
 
 .login-btn {
@@ -176,7 +178,8 @@ input[type="password"] {
 }
 
 .button-group button {
-    width: 48%; /* 调整宽度以确保两个按钮并列 */
+    width: 48%; /* Adjust the width to ensure that the two buttons are parallel
+ */
     padding: 10px;
     border: none;
     border-radius: 5px;
