@@ -1,14 +1,14 @@
 //StUdEnt Name: Walther Wang Zhe
 document.addEventListener('DOMContentLoaded', function() {
-    // 初始化：绑定事件监听器
+    // Initialization: Binding event listener
     initializeEventListeners();
 
-    // 检查用户是否已登录
+    // Check if the user has logged in
     checkLoginStatus();
 });
 
 function initializeEventListeners() {
-    // 绑定购物车相关事件
+    // Binding shopping cart related events
     if (document.querySelectorAll('.add-to-cart').length > 0) {
         document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', handleAddToCart);
@@ -29,7 +29,7 @@ function initializeEventListeners() {
         }
     }
 
-    // 绑定登录和注册相关事件
+    // Binding login and registration related events
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', handleLogin);
@@ -103,38 +103,38 @@ function updateTotal() {
 }
 
 function updateTotalDisplay() {
-    updateTotal(); // 确保总价是最新的
+    updateTotal(); // Ensure that the total price is up-to-date
 
     alert("Checkout process would start here with total: $" + document.querySelector('#total-value').textContent);
 }
 
-// 登录和注册功能
+// Login and registration functions
 function handleLogin(event) {
     event.preventDefault();
 
-    // 获取输入的用户名和密码
+    // Retrieve the input username and password
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
     console.log('Username:', username);
     console.log('Password:', password);
 
-    // 从 localStorage 中获取注册的用户名和密码
+    // Retrieve the registered username and password from localStorage
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
 
     console.log('Stored Username:', storedUsername);
     console.log('Stored Password:', storedPassword);
 
-    // 模拟登录验证
+    // Simulate login verification
     if (username === storedUsername && password === storedPassword) {
         console.log('Login successful');
-        // 登录成功
+        // Login succeeded
         localStorage.setItem('isLoggedIn', 'true');
         window.location.href = 'index.html';
     } else {
         console.log('Login failed');
-        // 登录失败
+        // Login failed
         alert('Invalid credentials');
     }
 }
@@ -145,11 +145,11 @@ function handleRegister(event) {
     const password = document.getElementById('password').value;
 
     if (username && password) {
-        // 保存用户名和密码到 localStorage
+        // Save username and password to local storage
         localStorage.setItem('username', username);
         localStorage.setItem('password', password);
         alert('Registration successful!');
-        window.location.href = 'login.html'; // 注册成功后跳转到 login.html
+        window.location.href = 'login.html'; // After successful registration, jump to login.html
     } else {
         alert('Please enter both username and password.');
     }
@@ -166,7 +166,7 @@ function checkLoginStatus() {
     const loginBtn = document.getElementById('login-btn');
 
     if (isLoggedIn) {
-        // 用户已登录，显示登出按钮并隐藏登录按钮
+        // The user has logged in, display the logout button and hide the login button
         if (logoutBtn) {
             logoutBtn.style.display = 'block';
         }
@@ -174,7 +174,7 @@ function checkLoginStatus() {
             loginBtn.style.display = 'none';
         }
     } else {
-        // 用户未登录，显示登录按钮并隐藏登出按钮
+        // User not logged in, display login button and hide logout button
         if (logoutBtn) {
             logoutBtn.style.display = 'none';
         }
@@ -182,7 +182,7 @@ function checkLoginStatus() {
             loginBtn.style.display = 'block';
         }
 
-        // 如果在购物车页面且未登录，显示提示并重定向到登录页面
+        // If not logged in on the shopping cart page, display a prompt and redirect to the login page
         const currentPage = window.location.pathname;
         if (currentPage.endsWith('Shopping_Cart.html')) {
             alert('Please login first');
