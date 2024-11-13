@@ -1,10 +1,17 @@
 //StUdEnt Name: Walther Wang Zhe
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialization: Binding event listener
     initializeEventListeners();
 
-    // Check if the user has logged in
-    checkLoginStatus();
+    // Check if the user has logged in, but only for non-index, non-login, and non-create pages
+    const currentPage = window.location.pathname;
+    if (!currentPage.endsWith('index.html') && !currentPage.endsWith('login.html') && !currentPage.endsWith('create.html')) {
+        checkLoginStatus();
+    }
+
+    // Update the login/logout button state based on the login status
+    updateLoginLogoutButtons();
 });
 
 function initializeEventListeners() {
@@ -162,6 +169,16 @@ function handleLogout() {
 
 function checkLoginStatus() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (!isLoggedIn) {
+        // User not logged in, display a prompt and redirect to the login page
+        alert('Please login first');
+        window.location.href = 'login.html';
+    }
+}
+
+function updateLoginLogoutButtons() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const logoutBtn = document.getElementById('logout-btn');
     const loginBtn = document.getElementById('login-btn');
 
@@ -180,13 +197,6 @@ function checkLoginStatus() {
         }
         if (loginBtn) {
             loginBtn.style.display = 'block';
-        }
-
-        // If not logged in on the shopping cart page, display a prompt and redirect to the login page
-        const currentPage = window.location.pathname;
-        if (currentPage.endsWith('Shopping_Cart.html')) {
-            alert('Please login first');
-            window.location.href = 'login.html';
         }
     }
 }
