@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Training Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niu Be IT</title>
     <link rel="stylesheet" href="styles.css"> <!-- Introducing external CSS -->
     <style>
         /* Temporary inline CSS for dropdown menus that should actually be moved to styles.css */
@@ -16,7 +17,7 @@
 <body>
 
     <div class="header" style="background-color: rgb(1, 191, 255); color: orange; font-size: 36px;">
-        Training Center
+        Niu Be IT
     </div>
 
     <div class="navbar">
@@ -36,7 +37,7 @@
         <button class="logout-btn" id="logout-btn">Logout</button>
     </div> <!-- End navbar -->
 
-    <img src="home.jfif" alt="Training Center Image" style="width:100%; max-width:800px; margin:20px auto; display:block;"> <!-- Replace your-image.jpg with the path to your image -->
+    <img src="home.jfif" alt="Niu Be IT Image" style="width:100%; max-width:800px; margin:20px auto; display:block;"> <!-- Replace your-image.jpg with the path to your image -->
 
     <div class="header">
         ICT CLASS
@@ -203,34 +204,6 @@
         By IT A2 © Made in 2024. All rights reserved.
     </footer>
 
-    <script src="home.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            var logoutBtn = document.getElementById('logout-btn');
-            var loginBtn = document.getElementById('login-btn');
-        
-            if (isLoggedIn) {
-                // User is logged in, show logout button and hide login button
-                logoutBtn.style.display = 'block';
-                loginBtn.style.display = 'none';
-        
-                // Add logout event handler
-                logoutBtn.addEventListener('click', function() {
-                    localStorage.removeItem('isLoggedIn');
-                    window.location.href = 'index.html';
-                });
-            } else {
-                // User is not logged in, show login button and hide logout button
-                logoutBtn.style.display = 'none';
-                loginBtn.style.display = 'block';
-
-                // Show alert and redirect to login page
-                alert('Please login first');
-                window.location.href = 'login.html';
-            }
-        });
-    </script>
-
+    <script src="main.js"></script>
 </body>
 </html>
