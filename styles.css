@@ -86,17 +86,15 @@ body {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 8px 12px; /* Reduce button size */
+    padding: 8px 12px; /* 减小按钮大小 */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px; /* Reduce font size
- */
+    font-size: 14px; /* 减小字体大小 */
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    display: none; /* Default Hide
- */
+    display: none; /* 默认隐藏 */
 }
 
 .login-btn {
@@ -178,8 +176,7 @@ input[type="password"] {
 }
 
 .button-group button {
-    width: 48%; /* Adjust the width to ensure that the two buttons are parallel
- */
+    width: 48%; /* 调整宽度以确保两个按钮并列 */
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -330,4 +327,101 @@ input[type="password"] {
     text-align: justify;
     width: 70%;
     max-width: auto;
+}
+
+/* Media Queries for responsive design */
+
+/* RWD-1: Adjust header font size for tablets and mobiles */
+@media (max-width: 768px) {
+    .header {
+        font-size: 24px;
+    }
+
+    /* RWD-2: Change navbar layout for smaller screens */
+    .navbar a, .dropdown .dropbtn {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* RWD-3: Adjust login and logout buttons for smaller screens */
+    .login-btn, .logout-btn {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    /* RWD-4: Change product display for smaller screens */
+    .products {
+        flex-direction: column;
+    }
+
+    .product-group {
+        flex-direction: column;
+    }
+
+    /* RWD-5: Change outstanding graduates section for smaller screens */
+    .outstanding-graduates {
+        flex-direction: column;
+    }
+
+    .outstanding-graduates .graduate-profile {
+        margin-bottom: 20px;
+    }
+
+    /* RWD-6: Adjust text table for smaller screens */
+    .text-table {
+        width: 100%;
+    }
+
+    .text-table td {
+        padding: 10px;
+    }
+
+    /* RWD-7: Change button group layout for smaller screens */
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* RWD-8: Further adjust header font size for mobiles */
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px;
+    }
+
+    /* RWD-9: Adjust table font sizes for very small screens */
+    .welcome-table, .course-table, .resource-table {
+        font-size: 14px;
+    }
+
+    /* RWD-10: Adjust graduate image and profile content for very small screens */
+    .outstanding-graduates .graduate-image {
+        width: 100%;
+    }
+
+    .outstanding-graduates .profile-content {
+        width: 100%;
+    }
 }
