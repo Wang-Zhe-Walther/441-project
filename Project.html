@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Training Center</title>
-    <link rel="stylesheet" href="styles.css"> <!-- CSS -->
+    <title>Niu Be IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部CSS -->
     <style>
         .logout-btn {
             display: none;
@@ -14,7 +15,7 @@
 <body>
 
     <div class="header" style="background-color: rgb(1, 191, 255); color: orange; font-size: 36px;">
-        Training Center
+        Niu Be IT
     </div>
 
     <div class="navbar">
@@ -60,34 +61,7 @@
         By IT A2 © Made in 2024. All rights reserved.
     </footer>
 
-    <script src="home.js"></script> <!--  -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            var logoutBtn = document.getElementById('logout-btn');
-            var loginBtn = document.getElementById('login-btn');
-
-            if (isLoggedIn) {
-                // User is logged in, show logout button and hide login button
-                logoutBtn.style.display = 'block';
-                loginBtn.style.display = 'none';
-
-                // Add logout event handler
-                logoutBtn.addEventListener('click', function() {
-                    localStorage.removeItem('isLoggedIn');
-                    window.location.href = 'index.html';
-                });
-            } else {
-                // User is not logged in, show login button and hide logout button
-                logoutBtn.style.display = 'none';
-                loginBtn.style.display = 'block';
-
-                // Show alert and redirect to login page
-                alert('Please login first');
-                window.location.href = 'login.html';
-            }
-        });
-    </script>
+    <script src="main.js"></script> <!--  -->
 
 </body>
 </html>
