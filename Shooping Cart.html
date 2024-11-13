@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Training Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niu Be IT</title>
     <link rel="stylesheet" href="styles.css"> <!--  -->
     <script src="main.js" defer></script>
     <style>
@@ -17,7 +18,7 @@
 <body>
 
     <div class="header" style="background-color: rgb(1, 191, 255); color: orange; font-size: 36px;">
-        Training Center
+        Niu Be IT
     </div>
 
     <div class="navbar">
@@ -37,7 +38,7 @@
         <button class="logout-btn" id="logout-btn">Logout</button>
     </div> <!-- End navbar -->
 
-    <img src="shopping.jfif" alt="Training Center Image" style="width:100%; max-width:800px; margin:20px auto; display:block;"> <!--  -->
+    <img src="shopping.jfif" alt="Niu Be IT Image" style="width:100%; max-width:800px; margin:20px auto; display:block;"> <!--  -->
 
     <div class="products">
         <div class="product-group">
@@ -150,33 +151,5 @@
     </footer>
 
     <script src="main.js"></script> <!--  -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            var logoutBtn = document.getElementById('logout-btn');
-            var loginBtn = document.getElementById('login-btn');
-
-            if (isLoggedIn) {
-                // User is logged in, show logout button and hide login button
-                logoutBtn.style.display = 'block';
-                loginBtn.style.display = 'none';
-
-                // Add logout event handler
-                logoutBtn.addEventListener('click', function() {
-                    localStorage.removeItem('isLoggedIn');
-                    window.location.href = 'index.html';
-                });
-            } else {
-                // User is not logged in, show login button and hide logout button
-                logoutBtn.style.display = 'none';
-                loginBtn.style.display = 'block';
-
-                // Show alert and redirect to login page
-                alert('Please login first');
-                window.location.href = 'login.html';
-            }
-        });
-    </script>
-
 </body>
 </html>
